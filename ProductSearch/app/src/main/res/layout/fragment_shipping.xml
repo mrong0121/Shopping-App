@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ShippingFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/progresslayout">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="683dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/progress_search"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/textNoresults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/noresults"
+        android:layout_marginTop="300dp"
+        android:visibility="gone" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/soldlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/truck"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:text="@string/soldby"/>
+        </LinearLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp">
+            <TableRow
+                android:id="@+id/storenamerow"
+                android:minHeight="35dp">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/storename"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/storenametext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textSize="18sp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/feedbackscorerow"
+                android:minHeight="35dp">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feedbackscore"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/feedbackscoretext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/popularityrow"
+                android:minHeight="35dp">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/popularity"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <com.wssholmes.stark.circular_score.CircularScoreView
+                    android:id="@+id/popularitycir"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:setTextColor="@android:color/black"
+                    app:backgroundTint="@android:color/transparent"
+                    app:setPrimaryColor="@android:color/holo_red_dark"
+                    app:setBackgroundColor="@android:color/transparent"
+                    app:setSecondaryColor="@android:color/white">
+                </com.wssholmes.stark.circular_score.CircularScoreView>
+            </TableRow>
+            <TableRow
+                android:id="@+id/feedbackstarrow"
+                android:minHeight="35dp">
+                <TextView
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feedbackstar"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <ImageView
+                    android:id="@+id/feedbackstarimg"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:src="@drawable/star"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/shipinfolay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ferry"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:text="@string/shipinfo"/>
+
+        </LinearLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp">
+            <TableRow
+                android:id="@+id/shippingcostrow"
+                android:minHeight="35dp">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shippingcost"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/shippingcosttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textSize="18sp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/globalshippingrow"
+                android:minHeight="35dp">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/globalshipping"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/globalshippingtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textSize="18sp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/handlingtimerow"
+                android:minHeight="35dp">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/handlingtime"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/handlingtimetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textSize="18sp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/conditionrow"
+                android:minHeight="35dp">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/condition"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/conditiontext"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textSize="18sp"/>
+            </TableRow>
+        </TableLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/returnlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dumptruck"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:text="@string/returnpolicy"/>
+        </LinearLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp">
+            <TableRow
+                android:id="@+id/policyrow"
+                android:minHeight="35dp">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/policy"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/policytext"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textSize="18sp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/returnswithinrow"
+                android:minHeight="35dp">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/returnswithin"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/returnswithintext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textSize="18sp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/refundmoderow"
+                android:minHeight="35dp">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/refundmode"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/refundmodetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textSize="18sp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/shippiedbyrow"
+                android:minHeight="35dp">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shippedby"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/shippedbytext"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textSize="18sp"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

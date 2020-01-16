@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#008577</color>-->
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <!--<color name="colorAccent">#D81B60</color>-->
+    <color name="colorBar">#6200EE</color>
+    <color name="colorBardark">#3700AD</color>
+    <color name="colorText">#adadad</color>
+    <color name="colorAccent">#BD82FC</color>
+    <color name="launchback">#6200ee</color>
+    <color name="butColor">#fc5830</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700AD</color>
+    <color name="toastback">#f0f0f0</color>
+    <color name="price">#5e12c9</color>
+    <color name="Red">#8b0000</color>
+    <color name="Blue">#0000ff</color>
+    <color name="Green">#00ff00</color>
+    <color name="Purple">#800080</color>
+    <color name="Silver">#c0c0c0</color>
+    <color name="Yellow">#ffff00</color>
+    <color name="Turquoise">#30d5c8</color>
+</resources>
